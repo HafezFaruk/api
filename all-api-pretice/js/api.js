@@ -8,14 +8,20 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
     .then(json => console.log(json));
 
 function loadUsers() {
-    fetch('https://jsonplaceholder.typicode.com/users')
+    fetch('https://jsonplaceholder.typicode.com/comments')
         .then(res => res.json())
         .then(data => displayUsers(data))
 }
+loadUsers()
+/* function loadUsers() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(res => res.json())
+        .then(data => displayUsers(data))
+} */
 function loadPosts() {
     fetch('https://jsonplaceholder.typicode.com/posts')
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => console.log(data)) 
 }
 
 
